@@ -92,7 +92,13 @@
                                 <td>
                                     <!-- <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id">Editar</a> -->
                                     <a class="btn-editar" :href="'producto_update.html?id='+ producto.id">Editar</a>
-                                    <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)">Eliminar</button>
+                                    <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" onclick="refreshPage()">Eliminar</button>
+                                    <script>
+                                        function refreshPage() {
+                                            // What do I put here?
+                                            window.location.reload();
+                                        } 
+                                    </script>
                                 </td>
                             </tr>
                         </tbody>
