@@ -1,0 +1,625 @@
+/*  Hoja de Estilos Proyecto CAC Phyton  */
+:root {
+/*     
+
+       Colores Globales 
+
+Cambié esta parte del código para unificar la definición de los colores en un solo lugar.
+JE 20230927-1115
+
+*/
+
+  --fondo-std: rgba(116, 211, 114, 1.0);
+  --fondo-menu: rgba(64, 128, 63, 1.0);  
+  --frente-std: white;
+  --top-logo: 300px;
+  --logo-size: 500px;
+  --botones: rgba(64, 128, 63, 1.0);
+  --botones_over: linear-gradient(135deg, #aaffaa, #55ff55);
+}
+
+* {
+  margin: 5px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Roboto, Sans-Serif;
+  font-family: Fascinate Inline, sans-serif;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    background-color: var(--fondo-std);
+    border-radius: 5px;
+    width: 100%;
+}
+
+footer, .fila, .img{
+  display: flex;
+}
+
+.imgIndex {
+  width: 100%;
+  opacity: 0.8;
+}
+
+
+.img {
+  margin-top: 10px;
+  /* width: 100%; */
+  align-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* 3 columnas*/
+.column { 
+  flex: 30%;
+  max-width: 30%;
+} 
+
+.column .imag {
+  margin-top: 8px;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+h4 {
+  text-align: center;
+}
+
+footer  .info-contacto {
+color: white;
+font-size: 15px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+font-weight: bold;
+}
+
+footer, .fila {
+  justify-content: space-around;
+}
+
+header h1, h2 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  text-align: center;
+  position: relative;
+  animation: aparecer 3s forwards;
+  opacity: 0; 
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+h1.logo-gp {
+  font-family: Verdana;
+  font-size: 3rem;
+  color: yellow;
+}
+
+h2.logo-gp {
+  font-family: Verdana;
+  font-size: 1rem;
+  color: yellow;
+}
+ 
+@keyframes aparecer {
+  0% { width: 0; }
+  100% { width: 100%; opacity: 1; }
+}
+
+header {
+    background-color: var(--fondo-menu);
+    padding: 7px;
+    margin-top: 0px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.nav {
+  margin: 0;
+}
+
+
+/* ESTILO PREGUNTAS FRECUENTES Y QUIENES SOMOS */
+.faq {
+  color: var(--fondo-menu);
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+h4 {
+  display: flex;
+  padding: 10px;
+  width: 85%;
+  display: block;
+  border-radius: 5%;
+  margin: 20px auto 10px 0px;
+  background-color: var(--fondo-std);
+  position: relative;
+  animation: aparecer 3s forwards;
+}
+
+.qs {
+  font-size: 23px;
+  color: white;
+}
+
+.qs p, .descrip, .rta {
+  font-size: 18px;
+  color: black
+}
+
+.contMapas{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* Estilos usados en las páginas de detalle de productos: 
+*/
+
+h2.producto {
+  color:white;
+  background-color: var(--fondo-std);
+  text-align: center;
+  padding: 15px;
+  margin: 20px 0px 20px 0px;
+  font-size: 2rem;
+  border-radius: 5px;
+}
+
+h3.producto {
+  color:white;
+  background-color: var(--fondo-menu);
+  text-align: center;
+  padding: 5px;
+  margin: 10px 0px 10px 0px;
+  font-size: 1.15rem;
+  border-radius: 5px;
+}
+
+.img-producto, .tbl-producto, .img {
+  width: 50%;
+  display: block;
+  border-radius: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tbl-producto {
+  width: 95%;
+}
+
+img.iconos-descarga {
+  width: 8%;
+  display: block;
+  border-radius: 5%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.iconos-leyenda {
+  font-size: 0.8rem;
+  width: 25%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/*Formulario de contactos
+registros.html*/
+
+.contacto{  
+  background-color: white;
+  padding: 20px 0 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  color: white;
+  text-align: center; 
+  position: relative;
+}
+
+.contacto .contenido-seccion{
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.contacto .contenido-seccion h3{
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.contacto .contenido-seccion .fila{
+  display: flex;
+  justify-content: space-around;
+}
+
+.contacto .contenido-seccion .fila .col{
+  margin-top: 50px;
+}
+.contacto .contenido-seccion .fila .col h2{
+  color: #40803F;
+}
+
+.container {
+  background-image: url(../img/energia-renovables1\ \(1\).png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  background-color: rgba(64, 128, 63, 1.0);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #aaffaa, #55ff55,1);
+}
+
+
+/* Estilos usados en Blog de noticias*/
+
+h3 {
+  color: #ffffff;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.containerNoticias{
+    padding: 0 25px 25px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.noticia{
+  width: 500px;
+  height: 310px;
+  position: relative;
+  margin: 25px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.noticia:hover {
+  transform: scale(1.05);
+}
+
+.imagenFondo{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+h3.tituloNot{
+  margin-top: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/*   Menú desplegable */
+
+.nav-bar {
+  background-color: var(--fondo-menu);
+  border-radius: 5px;
+  padding: 15px;
+  display: block;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.menu,.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+
+}
+
+.menu {
+  position: absolute;
+  background: rgba(64, 128, 63, 1.0);
+  border-radius: 5px;
+  margin-left: -110%;
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+.menu__link {
+  display: block;
+  padding: 5px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  margin: 10px;
+}
+
+.menu__link:hover {
+  background:linear-gradient(135deg, #035303, #17e017);
+  color: white;
+}
+
+.submenu {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.submenu .menu__link {
+  background: var(--fondo-menu);
+  color: white;
+  padding-left: 50px;
+}
+
+.mostrar {
+  margin-left: 0;
+}
+
+
+/* MEDIA QUERIES */
+
+/* TAMAÑO CELULAR */
+
+ @media (max-width: 320px){
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+
+  h1.logo-gp {
+    font-size: 1rem;
+  }
+
+  h2.logo-gp {
+    font-size: 0.8rem;
+  }
+
+  h2.producto {
+    font-size: 1.15rem;
+  }
+
+  h2{
+    font-size: 16px;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 16px;
+  }
+
+  h3.tituloNot{
+    font-size: 15px;
+  }
+
+  .containerNoticias{
+    font-size: 24px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .noticia{
+    width: 100%;
+    height: 240px;
+    margin: 20px 0 0 0;
+  }
+  p{
+    -webkit-line-clamp:7;
+  }
+
+  footer, .fila, .descrip  {   
+    flex-direction: column;
+  }
+
+  .contMapas{
+    flex-direction: column;
+  }
+
+  .mapas {
+    max-width: 100%;
+  }
+
+}
+
+
+/* TAMAÑO TABLET */
+
+@media (min-width:321px) and (max-width:768px){
+  
+  h1.logo-gp {
+    font-size: 1.5rem;
+  }
+
+  h2.logo-gp {
+    font-size: 1rem;
+  }
+  
+  h2.producto {
+      font-size: 1.15rem;
+  }
+
+  h3.tituloNot{
+    font-size: 20px;
+  }
+  
+  .noticia{
+    width: 100%;
+    height: 240px;
+    margin: 20px 0 0 0;
+  }
+
+  footer, .fila, .descrip  {   
+    flex-direction: column;
+  }
+
+  .mapas {
+    max-width: 50%;
+  }
+}
+    
+
+/* TAMAÑO PC */
+
+@media(min-width: 769px) {
+  .nav-bar {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+  }
+
+  .menu__link {
+    display: block;
+    padding: 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+  }
+
+  .container-submenu {
+    position: relative;
+  }
+
+  .submenu {  
+    position: absolute;
+    top: 43px;
+    width: 200px;
+    overflow: visible;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .container-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mapas {
+    max-width: 50%;
+  }
+
+ } 
+/* crud */
+ .container-a {
+    color: black;
+ }
+ 
+ .btn {
+  color: black;
+  font-size: large;
+  padding: 5px;
+ }
+
+ .btn-editar {
+  color: black;
+  background-color: beige;
+  border-style: double;
+  border-radius: 5px;
+  font-size: large;
+  padding: 5px;
+ }
+
+ .btn-editar:hover {
+  color: var(--fondo-menu);
+ }
+
+ .btn-danger { 
+  color: white;
+  background-color: red;
+  border-color: red;
+  border-radius: 5px;
+ }
+ .btn-danger:hover{
+  background-color: rgb(174, 90, 90);
+ }
+ 
+td {
+  background-color: beige;
+  /* border-radius: 5px; */
+  border-radius: 5px;
+  padding: 0px;
+  text-align: center;
+}
+
+
+ th {
+  font-size: large;
+  
+ }
+
+ .prod {
+  color:#035303
+ } 
+
+ .editar-producto {
+  color: black;
+  border: black;
+ }
+
+ .aaa {
+  color: white;
+  font-size: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  font-weight: bold;
+ }
+
+ table {
+  max-width: 100%;
+ }
+ 
